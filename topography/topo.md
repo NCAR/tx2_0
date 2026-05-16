@@ -31,3 +31,17 @@ This step creates the basic topography file with **raw cell-level depth statisti
 topo.sub150.tx2_0v1.SRTM15_V2.4.nc
 ```
 
+---
+
+### 3) Edit land mask
+
+Notebook:
+```
+MaskEdit_tx2_0v1.ipynb
+```
+This notebook edits the land mask, including **removing 1-point bays around Greenland and Antarctica**.
+
+**Output**
+```
+topo.sub150.tx2_0v1.SRTM15_V2.4.edit1.nc
+```

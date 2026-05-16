@@ -1,5 +1,7 @@
 *.o*
 *.nc
+*.ipynb_checkpoints
+*__pycache__
 
 supergrid/make_hgrid
 
