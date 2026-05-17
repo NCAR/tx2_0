@@ -1,5 +1,7 @@
 *.o*
+*.in
 *.nc
+*.swp
 *.ipynb_checkpoints
 *__pycache__
 
@@ -13,4 +15,3 @@ topography/src/mom6_grid.mod
 topography/src/ncdf_wrapper.mod
 topography/src/sorting.mod
 topography/src/test_grid
-topography/create_model_topo.in
