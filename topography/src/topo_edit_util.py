@@ -356,7 +356,7 @@ def map_topo_latlon(df,lon_beg,lon_end,lat_beg,lat_end,zmax,zmin=0,
         
     return ax
 
-def inspect_topo(df,zvar,lon_beg,lon_end,lat_beg,lat_end,zmax,zmin=0,place=None,figsize=(10,7.5)):
+def inspect_topo(df,zvar,lon_beg,lon_end,lat_beg,lat_end,zmax,zmin=0,places=None,figsize=(10,7.5)):
     
     import numpy as np
     import xarray as xr
@@ -426,13 +426,16 @@ def inspect_topo(df,zvar,lon_beg,lon_end,lat_beg,lat_end,zmax,zmin=0,place=None,
                 df.geolatb[j+jbeg,ibeg:iend],color='blue',linewidth=0.5,
                 transform=ccrs.PlateCarree())
         
-    if place != None :
-        zlab = '{0:d}'.format(int(place['depth']))
-        lat = place['lat']
-        lon = place['lon']
-        ax.scatter(lon,lat,marker='*',color='red')
-        lon = lon + 0.01
-        ax.text(lon,lat,zlab,color='red',ha='left',va='center',fontsize=8)
+    if places != None :
+        soc_table = create_soc_topo_table()
+        for name in places :
+            place = soc_table[name]
+            zlab = '{0:d}'.format(int(place['depth']))
+            lat = place['lat']
+            lon = place['lon']
+            ax.scatter(lon,lat,marker='*',color='red')
+            lon = lon + 0.01
+            ax.text(lon,lat,zlab,color='red',ha='left',va='center',fontsize=8)
         
     ax.coastlines(color='grey')
     ax.gridlines(draw_labels=True, dms=True, x_inline=False, y_inline=False, linestyle='dotted')
