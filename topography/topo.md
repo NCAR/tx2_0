@@ -83,3 +83,16 @@ D_edit2
 
 ---
 
+### 6) Create channel width file
+
+Notebook:
+```
+Channel_width_tx2_0v1.ipynb
+```
+Creates the **channel width file** used by the model.
+
+**Output**
+```
+channels_tx2_0v1_[yymmdd].txt
+```
+
