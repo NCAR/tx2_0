@@ -12,6 +12,16 @@ Equator and 60&deg;. The target meridional resolutions for the T-grid at differe
 | :---:        | :---:      | :---:    | :---:    | :---:    | :---:    | :---:    | :---:    |
 | Grid spacing | 2.0&deg;   | 1.0&deg; | 2.0&deg; | 0.4&deg; | 2.0&deg; | 1.0&deg; | 1.4&deg; |
 
+<p align="center">
+  <img src="tx2_0_dlat.png" alt="Meridional resolution" width="30%"><br>
+  <strong>Figure 1: Meridional grid spacing as a function of latitude.</strong>
+</p>
+
+<p align="center">
+  <img src="tx2_0_grid.png" alt="Grid comparison" width="100%"><br>
+  <strong>Figure 2: Comparison of ORCA grid and FRE grid in the Northern Hemisphere.</strong>
+</p>
+
 ## Usage
 
 1. Download and install [FRE-NCtools](https://github.com/NOAA-GFDL/FRE-NCtools). Module needed for installation: `nco`.
